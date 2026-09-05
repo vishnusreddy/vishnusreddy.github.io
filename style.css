@@ -23,7 +23,9 @@ li { padding-left: 2px; margin-bottom: 8px; }
 @media (max-width: 600px) { main { margin: 32px auto; } }
 @media print { main { margin: 0; max-width: none; } body { font-size: 11pt; } section { break-inside: avoid; } }
 
-.timeline { list-style: none; margin: 20px 0 24px 4px; padding: 0 0 0 20px; border-left: 1px solid #ddd; }
+.timeline { list-style: none; margin: 20px 0 24px 4px; padding: 0 0 0 20px; }
 .timeline li { position: relative; margin: 0; padding: 0 0 18px; }
 .timeline li:last-child { padding-bottom: 0; }
 .timeline li::before { content: ""; position: absolute; left: -24px; top: 9px; width: 7px; height: 7px; border-radius: 50%; background: #777; }
+
+.timeline li:not(:last-child)::after { content: ""; position: absolute; left: -21px; top: 16px; bottom: -9px; width: 1px; background: #ddd; }
